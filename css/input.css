@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'HelveticaBold';
+  src: url('/Helvetica-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/Helvetica.ttf');
+}
+
+@font-face {
+  font-family: 'Monolisa';
+  src: url('/Monolisa.ttf');
+}
+
+h1::selection,
+p::selection,
+a::selection,
+span::selection {
+  background-color: white;
+  color: navy;
+  font-weight: 600;
+}
+
+#html::selection {
+  background-color: #f16529;
+  color: white;
+  font-weight: 600;
+}
+
+#css::selection {
+  background-color: #2965f1;
+  color: white;
+  font-weight: 600;
+}
+
+#js::selection {
+  background-color: #f0db4f;
+  color: white;
+}
+
+textarea {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

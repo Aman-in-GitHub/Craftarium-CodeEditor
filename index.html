@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link
+      rel="shortcut icon"
+      href="craftarium-favicon.png"
+      type="image/x-icon"
+    />
+    <script defer src="js/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Craftarium</title>
+  </head>
+  <body class="overflow-hidden font-HELVETICA">
+    <nav
+      class="relative flex items-center justify-between px-4 md:px-5 h-[10vh] py-2 lg:py-4 text-white bg-[#241571] dark:bg-[#000020] lg:px-12"
+    >
+      <h1 class="text-3xl lg:text-4xl font-HELVETICABOLD">
+        <a href=""
+          ><span class="text-4xl lg:text-5xl mr-0.5">C</span>raftarium</a
+        >
+      </h1>
+      <ul class="flex justify-center items-center gap-6 md:gap-8 lg:gap-10">
+        <span
+          class="cursor-pointer full-screen hover:scale-110 duration-500 ease-in-out active:scale-110"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="white"
+            class="bi bi-arrows-fullscreen"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"
+              stroke="white"
+              stroke-width=".8"
+            />
+          </svg>
+        </span>
+
+        <span
+          class="hidden cursor-pointer half-screen hover:scale-110 duration-500 ease-in-out active:scale-110"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="white"
+            class="bi bi-fullscreen-exit"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1
+            0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1
+            .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10
+            4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6
+            11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10
+            1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0
+            0 1-1 0v-4z"
+              stroke="white"
+              stroke-width=".8"
+            />
+          </svg>
+        </span>
+
+        <span
+          class="hover:scale-110 duration-500 active:scale-110 cursor-pointer"
+          id="sun"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            class="bi bi-brightness-high-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+            />
+          </svg>
+        </span>
+        <span
+          class="hover:scale-110 duration-500 cursor-pointer active:scale-110"
+          id="moon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="23"
+            fill="currentColor"
+            class="bi bi-moon-stars-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+            />
+            <path
+              d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+            />
+          </svg>
+        </span>
+
+        <a
+          href="https://github.com/Aman-in-GitHub"
+          target="_blank"
+          class="font-semibold lg:pr-0 grid place-content-start"
+          ><i
+            class="fa-brands fa-github text-3xl hover:scale-110 duration-500 ease-in-out active:scale-110"
+          ></i
+        ></a>
+      </ul>
+    </nav>
+    <main
+      class="bg-red-400 h-[90vh] grid text-white grid-rows-3 lg:grid-cols-3 lg:grid-rows-none"
+    >
+      <aside
+        class="bg-green-300 row-span-1 lg:row-span-2 lg:col-span-1 col-span-2 grid editors"
+      >
+        <div class="html-box box active hidden">
+          <div class="relative">
+            <label
+              for=""
+              class="absolute bg-[#1B1B1B] dark:bg-black py-1 px-4 lg:px-3 w-full"
+            >
+              <div class="lg:flex lg:justify-between inline">
+                <span class="text-[#F16529] html-switch switch cursor-pointer"
+                  ><i class="fa-brands fa-html5 mr-2"></i>HTML
+                </span>
+                <div class="justify-between items-center gap-4 hidden lg:flex">
+                  <span class="cursor-pointer hidden copy"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-clipboard"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                      />
+                      <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                      />
+                    </svg>
+                  </span>
+
+                  <span class="hidden lg:inline-block"
+                    ><i
+                      class="fa-solid fa-caret-down text-white cursor-pointer text-lg html-arrow"
+                    ></i
+                  ></span>
+                </div>
+              </div>
+
+              <span class="lg:hidden ml-5 cursor-pointer css-switch switch"
+                ><i class="fa-brands fa-css3-alt mr-2"></i>CSS</span
+              >
+              <span class="lg:hidden ml-5 cursor-pointer js-switch switch"
+                ><i class="fa-brands fa-js mr-2"></i>Javascript</span
+              >
+
+              <span
+                class="lg:hidden absolute top-[50%] translate-y-[-50%] right-0 px-4"
+                ><i
+                  class="fa-solid fa-caret-down text-white cursor-pointer text-lg html-stretch"
+                ></i
+              ></span>
+            </label>
+          </div>
+
+          <textarea
+            class="w-full h-full resize-none py-10 px-2 text-black dark:text-white dark:bg-[#232526] outline-none font-MONOLISA bg-[#dfdfdf]"
+            id="html"
+          ></textarea>
+        </div>
+
+        <div class="hidden lg:block relative css-box box">
+          <label
+            for=""
+            class="absolute bg-[#1B1B1B] dark:bg-black py-1 px-4 lg:px-3 w-full"
+          >
+            <span class="html-switch switch cursor-pointer lg:hidden"
+              ><i class="fa-brands fa-html5 mr-2"></i>HTML</span
+            >
+            <div class="lg:flex lg:justify-between inline">
+              <span
+                class="ml-5 lg:ml-0 cursor-pointer css-switch switch text-[#2965f1]"
+                ><i class="fa-brands fa-css3-alt mr-2"></i>CSS</span
+              >
+              <div class="justify-between items-center gap-4 hidden lg:flex">
+                <span class="copy hidden cursor-pointer"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="white"
+                    class="bi bi-clipboard"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                    />
+                    <path
+                      d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                    />
+                  </svg>
+                </span>
+                <span class="hidden lg:inline-block"
+                  ><i
+                    class="fa-solid fa-caret-down text-white cursor-pointer text-lg css-arrow"
+                  ></i
+                ></span>
+              </div>
+            </div>
+            <span class="ml-5 cursor-pointer js-switch switch lg:hidden"
+              ><i class="fa-brands fa-js mr-2"></i>Javascript</span
+            >
+
+            <span
+              class="lg:hidden absolute top-[50%] translate-y-[-50%] right-0 px-4"
+              ><i
+                class="fa-solid fa-caret-down text-white cursor-pointer text-lg css-stretch"
+              ></i
+            ></span>
+          </label>
+          <textarea
+            class="w-full h-full resize-none py-10 px-2 dark:bg-[#232526] text-black dark:text-white outline-none font-MONOLISA bg-[#dfdfdf]"
+            id="css"
+          ></textarea>
+        </div>
+
+        <div class="hidden lg:block relative js-box box">
+          <label
+            for=""
+            class="absolute bg-[#1B1B1B] dark:bg-black py-1 px-4 lg:px-3 w-full"
+          >
+            <span class="html-switch switch cursor-pointer lg:hidden"
+              ><i class="fa-brands fa-html5 mr-2"></i>HTML</span
+            >
+            <span class="lg:hidden ml-5 cursor-pointer css-switch switch"
+              ><i class="fa-brands fa-css3-alt mr-2"></i>CSS</span
+            >
+            <div class="lg:flex lg:justify-between inline">
+              <span
+                class="ml-5 lg:ml-0 cursor-pointer js-switch switch text-[#f0db4f]"
+                ><i class="fa-brands fa-js mr-2"></i>Javascript</span
+              >
+              <span
+                class="lg:hidden absolute top-[50%] translate-y-[-50%] right-0 px-4"
+                ><i
+                  class="fa-solid fa-caret-down text-white cursor-pointer text-lg js-stretch"
+                ></i
+              ></span>
+
+              <div class="justify-between items-center gap-4 hidden lg:flex">
+                <span class="hidden cursor-pointer copy"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="white"
+                    class="bi bi-clipboard"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                    />
+                    <path
+                      d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                    />
+                  </svg>
+                </span>
+
+                <span class="hidden lg:inline-block"
+                  ><i
+                    class="fa-solid fa-caret-down text-white cursor-pointer js-arrow text-lg"
+                  ></i
+                ></span>
+              </div>
+            </div>
+          </label>
+
+          <textarea
+            class="w-full h-full resize-none py-10 px-2 text-black dark:text-white dark:bg-[#232526] outline-none font-MONOLISA bg-[#dfdfdf]"
+            id="js"
+          ></textarea>
+        </div>
+      </aside>
+
+      <aside class="col-span-2 row-span-2 play-field">
+        <iframe class="bg-white w-full h-full frame"></iframe>
+      </aside>
+    </main>
+  </body>
+</html>
